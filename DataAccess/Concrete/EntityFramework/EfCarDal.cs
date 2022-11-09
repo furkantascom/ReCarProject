@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfCarrDal : ICarDal
+    public class EfCarDal : ICarDal
     {
         public void Add(Car entity)
         {
