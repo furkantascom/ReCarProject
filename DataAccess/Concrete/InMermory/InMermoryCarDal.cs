@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.InMermory
 {
-    public class InMermoryCarDal:ICarDal
+    public class InMermoryCarDal:ICarrDal
     {
         List<Car> _car;
         public InMermoryCarDal()
