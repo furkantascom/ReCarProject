@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class ReCarContext:DbContext
+    public class ReCarContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"(localdb)\mssqllocaldb;Database=ReCarProject;Trusted_Connection=true");
+            optionsBuilder
+                .UseSqlServer(@"Server=(LocalDB)\\MSSQLLocalDB;Database=ReCarProject;Trusted_Connection=true;");
         }
 
         public DbSet<Car> Car { get; set; }
