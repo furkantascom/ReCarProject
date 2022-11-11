@@ -20,12 +20,20 @@ namespace Business.Concrete
 
         public void Add(Car car)
         {
-            throw new NotImplementedException();
+            if (car.Description?.Length>=2 && car.DailyPrice > 0)
+            {
+                _carDal.Add(car);
+            }
+            else
+            {
+                Console.WriteLine("arabanın adını ve günlük fiyatını kontrol ediniz");
+            }
+         
         }
 
         public void Delete(Car car)
         {
-            throw new NotImplementedException();
+            _carDal.Delete(car);
         }
 
         public List<Car> GetAll()
@@ -35,17 +43,17 @@ namespace Business.Concrete
 
         public List<Car> GetCarsByBrandId(int brandId)
         {
-            throw new NotImplementedException();
+            return _carDal.GetAll(c=>c.BrandId ==brandId);
         }
 
         public List<Car> GetCarsByColorId(int colorId)
         {
-            throw new NotImplementedException();
+            return _carDal.GetAll(c => c.ColorId == colorId);
         }
 
         public void Update(Car car)
         {
-            throw new NotImplementedException();
+            _carDal.Update(car);
         }
     }
 }

@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.InMermory
 {
-    public class InMermoryCarDal:ICarDal
+    public class InMemoryCarDal:ICarDal
     {
         List<Car> _car;
-        public InMermoryCarDal()
+        public InMemoryCarDal()
         {
             //sql server
             _car = new List<Car> { 
